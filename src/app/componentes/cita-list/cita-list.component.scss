@@ -1,0 +1,26 @@
+.cita-item {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Una columna para la frase y el autor, otra para el botón */
+  }
+  
+  .cita-content {
+    padding-right: 10px; /* Espaciado entre la frase/autor y el botón */
+  }
+  
+  
+  .frase {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  
+  .autor {
+    font-size: 0.8em;
+    font-weight: lighter;
+    text-align: right;
+  }
+  
+  .trash-button {
+    width: 40px;
+    height: 100%;
+    justify-self: flex-end; /* Alinea el botón al final de su columna */
+  }

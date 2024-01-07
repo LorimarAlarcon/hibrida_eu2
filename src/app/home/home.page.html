@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Citas
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/configuracion']">
+        <ion-icon icon="settings-outline" slot="icon-only" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fabe-button color="primary" [routerLink]="['/gestion-citas']">
+    <ion-icon icon="add-circle-outline" slot="icon-only" style="font-size: 32px;">
+    </ion-icon>
+  </ion-fabe-button>
+</ion-fab>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <p>{{citaAleatoria}}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+<ng-template #noCitasTemplate
+>
+  <ion-card >
+    <ion-card-content color="light">
+      <p>No hay citas disponibles</p>
+    </ion-card-content>
+  </ion-card>
+</ng-template>
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fabe-button [routerLink]="['/gestion-citas']">
+    <ion-icon color="primary" icon="add-circle-outline" color="primary" size="large">
+    </ion-icon>
+  </ion-fabe-button>
+</ion-fab>

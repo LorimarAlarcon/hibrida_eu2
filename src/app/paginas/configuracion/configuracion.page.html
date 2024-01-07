@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" type="reset" />
+    </ion-buttons>
+    <ion-title>Configuraciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-toggle 
+          [(ngModel)]="permitirBorrarCitasInicio" 
+          (ionChange)="onCambioEnConfiguracionAleatoria($event)"
+          aria-label="Permitir eliminar citas en el inicio"
+      >
+        Permitir eliminar citas en el inicio
+      </ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

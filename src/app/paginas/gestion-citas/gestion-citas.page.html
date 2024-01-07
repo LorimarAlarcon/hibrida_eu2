@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" />
+      <ion-title>
+        Gestion de Citas
+      </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Formulario para agregar nueva cita -->
+  <ion-card color="light" class="cuadrado-celeste">
+    <app-cita-form (onCitaAgregada)="onCreateCita($event)"></app-cita-form>
+  </ion-card>
+
+  <!-- Lista de citas -->
+  <app-cita-list (eliminarCita)="eliminarCita($event)" [citas]="listaCitas" />
+</ion-content>
+
+
+
+

@@ -1,0 +1,14 @@
+<ion-list>
+  <ion-item *ngFor="let cita of citas">
+    <div class="cita-item">
+      <div class="cita-content">
+        <div class="frase">{{ cita.frase }}</div>
+        <div class="autor">{{ cita.autor }}</div>
+      </div>
+    <ion-button (click)="eliminarCita.emit(cita.id)" fill="clear" class="trash-button">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-button>
+    </div>
+  </ion-item>
+</ion-list>
+

@@ -1,0 +1,47 @@
+<br>
+  <ion-card-subtitle color= "dark"> 
+    <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crea una nueva cita</b>
+  </ion-card-subtitle>
+    <ion-card-content>
+      <ion-item>
+        <ion-input 
+          [(ngModel)]="cita.frase" 
+          required="required"
+          minlength="5" 
+          #citaInput="ngModel" 
+          label="Cita"> 
+        </ion-input>
+        <div 
+        [hidden]="!citaInput.valid || citaInput.pristine"
+        *ngIf="mensajeErrorFrase" 
+        class="mensaje-error">{{ mensajeErrorFrase }}</div>
+      </ion-item>
+      <ion-item>
+        <ion-input  
+          [(ngModel)]="cita.autor"
+          required="required"
+          minlength="2"
+          #autorInput="ngModel"
+          label="Autor"
+          placeholder="Mahatma Gandhi">
+        </ion-input>
+        <div 
+        [hidden]="!autorInput.valid || autorInput.pristine"
+        *ngIf="mensajeErrorAutor" 
+        class="mensaje-error">{{ mensajeErrorAutor }}</div>
+      </ion-item>
+    <ion-button 
+        [disabled]="!citaInput.valid || !autorInput.valid" 
+        (click)="onClick()"
+        fill="clear" 
+        slot="end"
+        aria-label="Botón para agregar cita">
+      <ion-label>AGREGAR
+      <ion-icon slot="icon-only" name="add-outline" />
+      </ion-label>
+    </ion-button>       
+  </ion-card-content>
+
+
+
+
